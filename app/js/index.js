@@ -78,10 +78,10 @@ async function runScript() {
   brand = getUrlParam("brand") || "default";
   env = getUrlParam("env") || 0;
 
-  if (brand !== "default") {
-    removeKeywordInputPage(); // clients don't get the keyword input
-    showTakeMeToDataHavenBtn();
-  }
+  // if (brand !== "default") {
+  //   removeKeywordInputPage(); // clients don't get the keyword input
+  //   showTakeMeToDataHavenBtn();
+  // }
 
   browserData = await collectBrowserData();
   console.log(browserData);
