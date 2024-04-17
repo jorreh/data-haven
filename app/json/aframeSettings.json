@@ -1,0 +1,145 @@
+{
+  "defaultEnvSettings": {
+    "grid": "none",
+    "groundTexture": "walkernoise",
+    "skyType": "gradient"
+  },
+  "presets": [
+    "goldmine",
+    "contact",
+    "egypt",
+    "arches",
+    "checkerboard",
+    "forest",
+    "threetowers",
+    "goaland",
+    "yavapai",
+    "poison",
+    "tron",
+    "japan",
+    "dream",
+    "volcano",
+    "starry",
+    "osiris"
+  ],
+  "presetSongs": {
+    "goldmine": "AnaCaptainslogue_-_Noir_Et_Blanc_Vie.mp3",
+    "contact": "(not_sure)Trudging_Along_-_Godmode.mp3",
+    "egypt": "Blacksmith-Godmode.mp3",
+    "arches": "Gamela_-_E_s_Jammy_Jams.mp3",
+    "checkerboard": "To_Have_to_in_Least_Water_-_pATCHES.mp3",
+    "forest": "(not_sure)Trudging_Along_-_Godmode.mp3",
+    "threetowers": "AnaCaptainslogue_-_Noir_Et_Blanc_Vie.mp3",
+    "goaland": "Gamela_-_E_s_Jammy_Jams.mp3",
+    "yavapai": "Blacksmith-Godmode.mp3",
+    "poison": "Gamela_-_E_s_Jammy_Jams.mp3",
+    "tron": "To_Have_to_in_Least_Water_-_pATCHES.mp3",
+    "japan": "(not_sure)Trudging_Along_-_Godmode.mp3",
+    "dream": "AnaCaptainslogue_-_Noir_Et_Blanc_Vie.mp3",
+    "volcano": "Blacksmith-Godmode.mp3",
+    "starry": "Gamela_-_E_s_Jammy_Jams.mp3",
+    "osiris": "To_Have_to_in_Least_Water_-_pATCHES.mp3"
+  },
+  "fog": {
+    "min": 0.6,
+    "max": 0.98
+  },
+  "lightPos": {
+    "morningHour": 7,
+    "eveningHour": 21,
+    "minPos": -0.06,
+    "maxPos": 2.2
+  },
+  "skyColor": {
+    "morningHex": "#70D3E6",
+    "eveningHex": "#F28236"
+  },
+  "dressingAmount": {
+    "min": 10,
+    "max": 800,
+    "minScreenSize": 90000,
+    "maxScreenSize": 4000000,
+    "preset": {
+      "contact": {
+        "min": 10,
+        "max": 150
+      },
+      "egypt": {
+        "min": 10,
+        "max": 100
+      },
+      "checkerboard": {
+        "min": 10,
+        "max": 180
+      },
+      "forest": {
+        "min": 50,
+        "max": 700
+      },
+      "goaland": {
+        "min": 30,
+        "max": 400
+      },
+      "yavapai": {
+        "min": 400,
+        "max": 1000
+      },
+      "goldmine": {
+        "min": 20,
+        "max": 600
+      },
+      "arches": {
+        "min": 4,
+        "max": 30
+      },
+      "threetowers": {
+        "min": 3,
+        "max": 30
+      },
+      "poison": {
+        "min": 3,
+        "max": 45
+      },
+      "tron": {
+        "min": 5,
+        "max": 180
+      },
+      "japan": {
+        "min": 3,
+        "max": 25
+      },
+      "dream": {
+        "min": 40,
+        "max": 1000
+      },
+      "volcano": {
+        "min": 3,
+        "max": 25
+      },
+      "starry": {
+        "min": 0,
+        "max": 1
+      },
+      "osiris": {
+        "min": 4,
+        "max": 80
+      }
+    }
+  },
+  "horizonColor": {
+    "charging": "#58D68D",
+    "notCharging": "#EC7063"
+  },
+  "gifCube": {
+    "width:": 1,
+    "height": 1,
+    "minAmount": 2,
+    "maxAmount": 8,
+    "minX": -7,
+    "maxX": 7,
+    "minZ": 0.5,
+    "maxZ": 7.5,
+    "minY": -7,
+    "maxY": 7
+  }
+}

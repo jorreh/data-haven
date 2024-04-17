@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Step inside a whole new world designed for and defined by you. A safe space based on 
+what you’re into, no matter what the **** that is."
+    />
+    <title>Welcome to Data Haven</title>
+
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+
+    <script src="app/js/libraries/p5.js"></script>
+    <script src="app/js/libraries/p5.sound.js"></script>
+
+    <link rel="stylesheet" href="app/styles/styles.css" />
+  </head>
+
+  <body>
+    <div id="lp-wrapper">
+      <img src="app/img/asn-undefined.png" alt="asn-undefined" id="asn-undefined-logo" />
+
+      <div id="page1" class="page">
+        <img src="app/img/Data-haven_full_logo.png" alt="data-haven" />
+
+        <div id="page-one-footer">
+          <p>Scroll for data awesomeness</p>
+
+          <a href="#page2">
+            <img src="app/img/scroll-icon.png" alt="scroll" />
+          </a>
+        </div>
+
+        <!-- <video class="hero__video" autoplay="" loop="" muted="" playsinline="">
+                <source src="app/img/noise_background_loop_compressed.mp4" type="video/mp4">
+            </video> -->
+      </div>
+
+      <div id="page2" class="page">
+        <img src="app/img/Data-haven_circle.png" class="circle" alt="Data-haven_circle" />
+
+        <div class="wrapper">
+          <p class="title">Welcome to Data Haven</p>
+          <p>
+            Step inside a whole new world designed for and defined by you. Using your data, we
+            create a safe space based on what you’re into, no matter what the **** that is. Take a
+            second and imagine your mind palace. Now we’ll do you one better. Welcome to your dream
+            destination, the embodiment of your fantasies, the pinnacle of your pleasure: your own
+            personal data haven.
+          </p>
+        </div>
+
+        <div class="btn-datahaven drop-shadow" id="btn-gotodataheaven-page2">
+          <img src="app/img/btn-sun.png" alt="sun" />
+          <span>Take Me To My Data Haven</span>
+        </div>
+
+        <!-- <video class="hero__video" autoplay="" loop="" muted="" playsinline="">
+                <source src="app/img/noise_background_loop_compressed.mp4" type="video/mp4">
+            </video> -->
+      </div>
+
+      <div id="page3" class="page">
+        <div class="wrapper">
+          <p>Just one question:</p>
+          <p class="title">What keeps you going?</p>
+
+          <input
+            type="text"
+            id="keyword"
+            name="keyword"
+            placeholder="Type one word, we won’t judge."
+          />
+
+          <!-- <img src="app/img/btn-step-inside-datahaven.png" class="btn-datahaven drop-shadow" id="btn-gotodataheaven" alt="goto-datahaven"> -->
+
+          <div class="btn-datahaven drop-shadow" id="btn-gotodataheaven">
+            <img src="app/img/btn-sun.png" alt="sun" />
+            <span>Step Inside Your Data Haven</span>
+          </div>
+        </div>
+
+        <!-- <video class="hero__video" autoplay="" loop="" muted="" playsinline="">
+                <source src="app/img/noise_background_loop_compressed.mp4" type="video/mp4">
+            </video> -->
+      </div>
+
+      <video class="hero__video" autoplay="" loop="" muted="" playsinline="">
+        <source src="app/img/noise_background_loop_compressed.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div id="dataHavenLoader" class="page">
+      <img src="app/img/Data-haven_full_logo.png" alt="data-haven" />
+
+      <p class="title">Configuring haven</p>
+
+      <div id="myProgress">
+        <div id="myBar"></div>
+      </div>
+
+      <p id="loaderProgressTxt"></p>
+    </div>
+
+    <div
+      id="test-playpause"
+      style="
+        padding: 20px;
+        background-color: bisque;
+        position: absolute;
+        z-index: 100;
+        top: 20px;
+        right: 20px;
+        visibility: hidden;
+      "
+    >
+      <p>play / pause</p>
+    </div>
+
+    <!-- data haven overlayer -->
+    <img src="app/img/asn-undefined.png" alt="asn-undefined" id="asn-undefined-logo-overscene" />
+
+    <div id="whythishaven-wrapper">
+      <div class="btn-wrapper" id="whythishaven-btn-wrapper">
+        <img src="app/img/why-datahaven.png" alt="why-datahaven.png" />
+        <p>What’s going on with my data?</p>
+      </div>
+
+      <div id="content-wrapper">
+        <div id="browserdata-wrapper">
+          <p class="title">Your browser data</p>
+
+          <p class="bold">Battery levels:</p>
+          <p>Ischarging: <span id="charging"></span></p>
+          <p>Percentage: <span id="level"></span></p>
+          <p>Charging Time: <span id="chargingTime"></span></p>
+          <p>Discharging Time: <span id="dischargingTime"></span></p>
+          <br />
+
+          <p class="bold">General data:</p>
+          <p>Browser Engine: <span id="browserEngine"></span></p>
+          <p>Browser Language: <span id="browserLanguage"></span></p>
+          <p>Browser Name: <span id="browserName"></span></p>
+          <p>Browser Online: <span id="browserOnline"></span></p>
+          <p>Browser Platform: <span id="browserPlatform"></span></p>
+          <p>Browser Version: <span id="browserVersion1b"></span></p>
+          <p>Cookies enabled: <span id="dataCookiesEnabled"></span></p>
+          <p>Device type: <span id="deviceType"></span></p>
+          <p>Java enabled: <span id="javaEnabled"></span></p>
+          <p>Previous sites: <span id="previousSites"></span></p>
+          <p>Src color depth: <span id="scrColorDepth"></span></p>
+          <p>Src pixel depth: <span id="scrPixelDepth"></span></p>
+          <p>Screen width: <span id="sizeScreenW"></span></p>
+          <p>Screen height: <span id="sizeScreenH"></span></p>
+          <p>Available screen width: <span id="sizeInW"></span></p>
+          <p>Available screen height: <span id="sizeInH"></span></p>
+          <p>Time opened: <span id="timeOpened"></span></p>
+          <br />
+        </div>
+
+        <img src="app/img/close.png" id="whythishaven-close" alt="close" />
+
+        <p>
+          It’s a good thing to be sceptical when sharing personal data, but it can also open up a
+          world of possibilities and benefits. Looking at your own browser data, you’d think: “How
+          will an ad be able to target my interests based on this data?” While individually these
+          variables might not come across as impressive, their looks can be deceiving.
+        </p>
+        <br />
+        <p>
+          Just like in Data Haven, advertisers combine all your variables to create a single profile
+          recognizing your browser everywhere you go. This may sound scary, but it can be used for
+          good - like replacing random spam with relevant ads. It’s how marketing noise is switched
+          out with relevant suggestions.
+        </p>
+        <br />
+        <p>
+          For this platform, we use it to make your own personal haven, taking your data and using
+          it to bring peace of mind instead of trying to deceive you. We’re handing your data right
+          back to you in ways you haven't seen before.
+        </p>
+        <br />
+        <p>
+          Want to know more about how we do this? Drop us a line at
+          <a href="mailto:info@adsomenoise.com">info@adsomenoise.com</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- <div id="socials-wrapper">
+            <img src="app/img/soc-fb.png" alt="fb">
+            <img src="app/img/soc-insta.png" alt="soc-ins">
+            <img src="app/img/soc-in.png" alt="in">
+        </div> -->
+
+    <div id="welcome-to-datahaven-popup">
+      <img src="app/img/close.png" id="popup-close" alt="close" />
+      <p>Welcome to your data haven</p>
+      <br />
+      <p>
+        Welcome to your dream destination, the embodiment of your fantasies, your own data haven.
+        It's a whole new world designed and defined by you. Ready to step inside your corner of the
+        internet? For the best experience turn on your sound and try the mobile VR feature.
+      </p>
+      <!-- <img src="app/img/explore_new2.png" alt="explore" id="explore"> -->
+      <div class="btn-datahaven drop-shadow" id="explore">
+        <img src="app/img/btn-sun.png" alt="sun" />
+        <span>Explore</span>
+      </div>
+    </div>
+
+    <div id="socials-wrapper">
+      <img src="app/img/soc-fb.png" alt="fb" />
+      <img src="app/img/soc-insta.png" alt="insta" />
+      <img src="app/img/soc-in.png" alt="linkedin" />
+    </div>
+
+    <!-- / data haven overlayer -->
+
+    <a-scene
+      inspector=""
+      keyboard-shortcuts=""
+      screenshot=""
+      vr-mode-ui=""
+      device-orientation-permission-ui=""
+      visible=""
+      my-scene
+      id="myscene"
+      embedded
+    >
+      <!-- Data haven logo -->
+      <a-image
+        src="app/img/Data-haven_circle.png"
+        width="20"
+        height="20"
+        position="-2.5 9.7 -19"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_graphics_3-ice-cream.png"
+        width="6"
+        height="6.6"
+        position="-11.5 4.63 -17.9"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_graphics_2-palm-tree.png"
+        width="6.5"
+        height="8.08"
+        position="-11.7 15.9 -17.9"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_graphics_4-laptop.png"
+        width="4.5"
+        height="5.0"
+        position="2.6 2.3 -17.9"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_graphics_1-surfer.png"
+        width="5"
+        height="6.8"
+        position="4.14 12.2 -17.9"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_graphics_2-palm-tree-flipped.png"
+        width="6.5"
+        height="8.08"
+        position="8.22906 10.88756 -17.55768"
+        transparent="true"
+      >
+      </a-image>
+      <a-image
+        src="app/img/Data-haven_wordmark.png"
+        width="28"
+        height="14"
+        position="-2.5 8.8 -17.5"
+        transparent="true"
+      >
+      </a-image>
+
+      <a-image
+        src="app/img/Data-haven_greetings.png"
+        width="14"
+        height="5.58"
+        position="-2.5 17.55443 -17.19466"
+      >
+      </a-image>
+
+      <!-- Test cubes -> delete -->
+      <!-- <a-entity geometry="" id="mycube" class="cube" animation="" position="-0.66805 2.24757 -3.51623"
+            material="shader: gif; src: url(https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)"></a-entity>
+        
+        <a-entity geometry="" id="mycube" class="cube" animation="" position="1 2.24757 -3.51623"
+            material="shader: gif; src: url(https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif)"></a-entity> -->
+
+      <!-- Client logo -->
+      <a-image
+        src="app/img/logos/asn-logo.png"
+        visible="false"
+        id="brand-banner-img"
+        width="50"
+        height="25"
+        position="-2.5 12.6 -40"
+      ></a-image>
+
+      <!-- Environment preset -->
+      <a-entity id="env-entity"></a-entity>
+    </a-scene>
+
+    <script>
+      var songName = "";
+
+      var song;
+      var button;
+      var fft;
+      var peakDetect;
+      var amp;
+
+      var songLoaded = false;
+
+      var cubes = [];
+
+      const $ = (queryString) => document.querySelector(queryString);
+
+      // preload = function () {
+      //     song = loadSound('app/sound/Arches/Blacksmith-Godmode.mp3');
+      // }
+
+      window.playMusic = function (song) {
+        cubes = document.getElementsByClassName("cube");
+        songName = song;
+      };
+
+      $("#test-playpause").addEventListener("click", function () {
+        togglePlaying();
+      });
+
+      $("#explore").addEventListener("click", function () {
+        togglePlaying();
+        $("#welcome-to-datahaven-popup").style.display = "none";
+      });
+
+      $("#popup-close").addEventListener("click", function () {
+        togglePlaying();
+        $("#welcome-to-datahaven-popup").style.display = "none";
+      });
+
+      function loaded() {
+        songLoaded = true;
+      }
+
+      function setup() {
+        setTimeout(() => {
+          console.log("song: " + songName);
+
+          if (songName !== "") {
+            song = loadSound("app/sound/" + songName, loaded);
+          } else {
+            console.error("song name not defined!");
+          }
+
+          amp = new p5.Amplitude();
+        }, 2000);
+      }
+
+      function draw() {
+        if (!songLoaded) {
+          return false;
+        }
+
+        var vol = amp.getLevel();
+        var scale = map(vol, 0, 1, 0.6, 4);
+
+        // const $ = (queryString) => document.querySelector(queryString);
+        // $('#mycube').setAttribute('animation', `property: scale;to: ${scale} ${scale} ${scale}; dur: 10; easing: easeInOutCubic; loop: 1;`);
+
+        for (var i = 0; i < cubes.length; i++) {
+          cubes[i].setAttribute(
+            "animation",
+            `property: scale;to: ${scale} ${scale} ${scale}; dur: 10; easing: easeInOutCubic; loop: 1;`
+          );
+        }
+      }
+
+      function togglePlaying() {
+        if (!song.isPlaying()) {
+          song.loop();
+        } else {
+          song.pause();
+        }
+      }
+    </script>
+
+    <script type="module" src="app/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "default": {
+        "environment": {
+            "preset": "forest"
+        }
+    },
+    "asn": {
+        "keywords": [
+            "banners", "puppy"
+        ],
+        "logo": "asn-logo.png",
+        "environment": {
+            "preset": "goaland"
+        },
+        "groundColors": [
+            "#0e0523",
+            "#5fffe3"
+        ],
+        "dressingColor": "#967dff"
+    }
+}

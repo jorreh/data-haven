@@ -1,0 +1,416 @@
+ @font-face {
+            font-family: 'DINPro';
+            src: url('../fonts/DINPro.woff2') format('woff2'),
+                url('./fonts/DINPro.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Medium';
+            src: url('../fonts/DINPro-Medium.woff2') format('woff2'),
+                url('./fonts/DINPro-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'DINPro-Bold';
+            src: url('../fonts/DINPro-Bold.woff2') format('woff2'),
+                url('../fonts/DINPro-Bold.woff') format('woff');
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        p,
+        a,
+        input[type=text], span {
+            font-family: DINPro, Arial, Helvetica, sans-serif;
+            font-weight: 100;
+            color: #0E0523;
+        }
+
+        input[type=text]{
+            text-align: center; 
+        }
+
+
+        p.title {
+            font-size: 35px;
+        }
+
+        P.bold, span.bold {
+            font-family: DINPro-Medium, Arial, Helvetica, sans-serif;
+        }
+
+        .drop-shadow {
+            box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+        }
+
+        #myscene {
+            position: absolute;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            /* background-color: #aa0000; */
+            z-index: 1;
+            visibility: hidden;
+        }
+
+
+        .page {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            width: 100vw;
+        }
+
+        .page * {
+            position: relative;
+            z-index: 1;
+        }
+
+        
+
+        #lp-wrapper {
+            width: 100%;
+            position: absolute;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        #lp-wrapper video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            object-fit: cover;
+            display: block;
+            /* width: 100%;
+            height: 100%; */
+            height: 100vh;
+        }
+
+        #asn-undefined-logo, #asn-undefined-logo-overscene {
+            position: fixed;
+            z-index: 7;
+            top: 20px;
+            left: 20px;
+            width: 250px;
+        }
+
+        #page1 {}
+
+        #page1 img {
+            width: 520px;
+        }
+
+        #page1 #page-one-footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 85%;
+        }
+
+        #page1 #page-one-footer p {
+            text-align: center;
+        }
+
+        #page1 #page-one-footer img {
+            margin-top: 10px;
+            width: 25px;
+        }
+
+        /* Page 2 */
+        #page2 {}
+
+        #page2 .wrapper {
+            position: relative;
+            max-width: 53%;
+            padding-left: 50px;
+        }
+
+        #page2 .circle {
+            position: absolute;
+            right: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            display: block;
+        }
+
+        #page2 #btn-gotodataheaven-page2 {
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+        }
+
+        .btn-datahaven {
+            /* width: 240px; */
+            cursor: pointer;
+            border-radius: 28px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #fff;
+                font-size: 13px;
+        }
+
+        .btn-datahaven img {
+            width: 25px;
+            margin-right: 8px;
+        }
+
+        #page2 .btn-datahaven {}
+
+        #btn-gotodataheaven-page2{
+            display: none;
+        }
+
+        #page3 {}
+
+        #page3 .wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-image: url("../img/Data-haven_BG_visual.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 30px;
+        }
+
+        #page3 #keyword {
+            height: 40px;
+            width: 85%;
+            border: none;
+            margin-top: 25px;
+            padding: 10px 25px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #888;
+            text-align: center; 
+        }
+
+        #page3 input[type=text] {
+            text-align: center;
+        }
+
+        #page3 #keyword:focus {
+            outline-style: none;
+            box-shadow: none;
+        }
+
+        #page3 .btn-datahaven {
+            margin-top: 18px;
+            cursor: pointer;
+        }
+
+        #dataHavenLoader {
+            /* display: flex; */
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            z-index: 4;
+
+            background-image: url("../img/Data-haven_BG_visual.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        #dataHavenLoader img {
+            width: 420px;
+        }
+
+        #myProgress {
+            border-radius: 10px;
+            margin-top: 30px;
+            width: 70%;
+            background-color: #fff;
+            border: 2px solid #fff;
+        }
+
+        #myBar {
+            border-radius: 10px;
+            width: 1%;
+            height: 8px;
+            background-color: #000;
+        }
+
+        #loaderProgressTxt {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+
+
+
+        /* Datahaven overlayer */
+
+        #asn-undefined-logo-overscene {
+            display: none;
+        }
+        
+
+        #whythishaven-wrapper {
+            display: block;
+            position: absolute;
+            z-index: 3;
+            bottom: 20px;
+            left: 20px;
+            max-width: 30%;
+            border-radius: 20px;
+            background-color: #fff;
+        }
+
+        #whythishaven-wrapper .btn-wrapper {
+            border-radius: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+            cursor: pointer;
+            width: 190px;
+        }
+
+        #whythishaven-wrapper .btn-wrapper img {
+            width: 40px;
+            display: inherit;
+        }
+
+        #whythishaven-wrapper .btn-wrapper p {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        #whythishaven-wrapper #content-wrapper #browserdata-wrapper {
+            border-radius: 20px;
+            background-color: #F4F4F4;
+            height: 220px;
+            overflow-y: scroll;
+            padding: 0 20px;
+            margin-bottom: 10px;
+        }
+
+        #whythishaven-wrapper #content-wrapper #browserdata-wrapper .title {
+            font-size: 19px;
+            text-decoration: underline;
+            padding: 10px 0;
+        }
+
+        #whythishaven-wrapper #content-wrapper #browserdata-wrapper p {
+            font-size: 15px;
+        }
+
+        #whythishaven-wrapper #content-wrapper {
+            display: none;
+            padding: 20px;
+            overflow-y: scroll;
+            max-height: 75vh;
+        }
+
+        #whythishaven-wrapper #content-wrapper #whythishaven-close {
+            cursor: pointer;
+            width: 20px;
+            position: absolute;
+            right: 15px;
+            top:15px;
+        }
+        
+
+        #welcome-to-datahaven-popup {
+            position: relative;
+            display: none;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            position: absolute;
+            z-index: 3;
+            width: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #welcome-to-datahaven-popup #explore {
+            /* cursor: pointer;
+            display: block; */
+            margin: 20px auto;
+            width: 160px;
+        }
+
+        #welcome-to-datahaven-popup #popup-close {
+            cursor: pointer;
+            width: 20px;
+            position: absolute;
+            right: 15px;
+            top:15px;
+        }
+
+        #socials-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #socials-wrapper img {
+            width: 30px;
+            padding: 20px 0;
+        }
+
+
+
+        @media screen and (max-width: 600px) {
+
+            #asn-undefined-logo, #asn-undefined-logo-overscene {
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 250px;
+            }
+
+            #page2 .wrapper {
+                max-width: 90%;
+            }
+
+            #welcome-to-datahaven-popup{
+                width: 96%;
+            }
+
+            #whythishaven-wrapper{
+                max-width: 90%;
+            }
+
+        }
